@@ -1,4 +1,8 @@
-function Card() {
+function Card(props) {
+  console.log(props);
+  const click = () => {
+    console.log("нажали на плюс");
+  };
   return (
     <>
       <div className="card">
@@ -6,27 +10,21 @@ function Card() {
           <img src="/img/heart-unliked.svg" alt="unliked" />
         </div>
         <div className="card__item">
-          {" "}
           <img
             width={150}
             height={160}
-            src="/img/chocolate/milk.jpg
- "
-            alt="chocolate"
+            src={props.image}
+            alt="chocolate image"
           />
         </div>
 
-        <h5>
-          Шоколад темный Callebaut (Бельгия),
-          <br />
-          54,5% какао, 2,5 кг
-        </h5>
+        <h5>{props.title}</h5>
         <div className="card__info">
           <div className="card__price">
             <span>Цена</span>
-            <b>1100 руб.</b>
+            <b>{props.price} руб.</b>
           </div>
-          <button className="button">
+          <button className="button" onClick={click}>
             <img
               width={11}
               height={11}
