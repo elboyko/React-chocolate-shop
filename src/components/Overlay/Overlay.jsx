@@ -1,19 +1,38 @@
 import styles from "./Overlay.module.scss";
 console.log(styles);
 
-function Overlay() {
+function Overlay(props) {
   return (
-    <div style={{ display: "none" }} className={styles.overlay}>
+    <div className={styles.overlay}>
       <div className={styles.right__side}>
         <h2>
           Корзина
           <img
+            onClick={props.onCloseCart}
             className={styles.removeBtn}
             src="/img/btn-remove.svg"
-            alt="remove"
+            alt="close"
           />
         </h2>
         <div className={styles.items}>
+          <div className={styles.cartItem}>
+            <img
+              className={styles.cartItem__img}
+              width={70}
+              height={70}
+              src="/img/chocolate/milk.jpg"
+              alt="chocolate image"
+            />
+            <div className={styles.cartItem__info}>
+              <p>Шоколад молочный, 2.5 кг</p>
+              <b>4500 руб.</b>
+            </div>
+            <img
+              className={styles.removeBtn}
+              src="/img/btn-remove.svg"
+              alt="remove"
+            />
+          </div>
           <div className={styles.cartItem}>
             <img
               className={styles.cartItem__img}

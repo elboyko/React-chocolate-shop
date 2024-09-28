@@ -27,6 +27,7 @@ header {
     display: flex;
     &__list {
       margin-right: 30px;
+      cursor: pointer;
       span {
         margin-left: 15px;
       }

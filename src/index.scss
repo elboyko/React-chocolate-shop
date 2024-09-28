@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-  padding: 40px;
+  padding: 30px;
 
   &__title {
     margin-top: 0;
@@ -39,7 +39,8 @@ body {
 }
 .cards {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .content__top {
